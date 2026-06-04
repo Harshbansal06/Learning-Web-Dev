@@ -6,6 +6,10 @@ Welcome to my repository! This is a dedicated space where I document my progress
 * HTML5 / CSS3
 * JavaScript
 * Git & GitHub
+* Node.Js
+* Express Js
+* EJS (Template Framework)
+* MongoDb & Mongoose
 
 ## 📁 Repository Structure
 * `/practice/` - Small code snippets and conceptual exercises.

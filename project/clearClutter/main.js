@@ -10,8 +10,11 @@ fs.readdir(mpath,  (err, files) => {
         // let k = file.split('.')[1]
         let k = path.extname(file)
 
-        
-
+        if(k==''){
+            k="No-extension"
+        }else {
+            k=path.extname(file).slice(1,);
+        }
 
         const fpath = path.join(path.dirname(mpath), k);
 
