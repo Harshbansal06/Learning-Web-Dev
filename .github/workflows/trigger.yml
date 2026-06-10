@@ -20,7 +20,7 @@ jobs:
             - name: add_num
               id: sum
               run: |
-               echo "::set.output name =sum ::${{inputs.number1}} + ${{inputs.number2}}"
+               echo "::set.output name=sum::${{inputs.number1}} + ${{inputs.number2}}"
 
             - name: display_sum
               run: |
