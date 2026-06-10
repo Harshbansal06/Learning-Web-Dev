@@ -1,0 +1,27 @@
+name : triggering the gihub actions
+
+on: 
+    workflow_dispatch:
+      inputs:
+        number1:
+            description: 'first num'
+            default: '10'
+            required: true
+
+        number2 :
+            description: 'second num'
+            default: '19'
+            required: true
+
+jobs:
+    adding_num:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: add_num
+              id: sum
+              run: |
+               echo "::set.output name =sum ::${{inputs.number1}} + ${{inputs.number2}}"
+
+            - name: display_sum
+              run: |
+                echo " the sum of input numbers is ${{steps.sum.outputs.sum}}"
