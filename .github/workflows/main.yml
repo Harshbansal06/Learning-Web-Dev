@@ -1,1 +1,19 @@
+name : learning github actions
 
+on:
+    workflow_dispatch: 
+
+env:
+    cloud: goole-cloud
+jobs:
+    variables:
+        runs-on: ubuntu-latest
+        steps:
+            - name: normal variables
+              run: |
+                echo $cloud is great.
+                echo ${{github.repository}} , ${{github.workflow}} are example of context variables
+                echo ${{vars.repo_variable}} is example of repo variables
+
+
+        
